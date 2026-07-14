@@ -55,7 +55,11 @@
     border-left-color: rgb(114,0,0);
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1300px) {
+    h1 {
+        font-size: 75px;
+}
+
     .breadcrumb a {
         height: 130px;
         line-height: 130px;
