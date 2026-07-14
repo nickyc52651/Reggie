@@ -26,4 +26,7 @@
     .folders li {
         width: 100%;
     }
+    .folders a {
+        font-size: 75px;
+    }
 }
