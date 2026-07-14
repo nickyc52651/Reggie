@@ -23,14 +23,11 @@
 }
 
 @media screen and (max-width: 1300px) {
-    h1 {
-        font-size: 75px;
-    }
-
     .folders li {
+        display: block;
         width: 75%;
         padding: 10px;
-        margin: 10px 0;
+        margin: 10px auto;
     }
 
     .folders a {
