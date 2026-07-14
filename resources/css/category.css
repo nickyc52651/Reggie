@@ -24,7 +24,6 @@
 
 @media screen and (max-width: 1300px) {
     .folders li {
-        display: block;
         width: 75%;
         padding: 10px;
         margin: 10px auto;
