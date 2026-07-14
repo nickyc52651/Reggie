@@ -1,3 +1,9 @@
+@media screen and (max-width: 700px) {
+    .folders li {
+        width: 100%;
+    }
+}
+
 .folders li {
     display: inline-flex;
     list-style: none;
