@@ -26,6 +26,7 @@
     .folders {
         display: flex;
         align-items: center;
+        justify-content: center;
 }
 
     .folders li {
