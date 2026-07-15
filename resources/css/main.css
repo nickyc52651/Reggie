@@ -55,13 +55,24 @@
     border-left-color: rgb(114,0,0);
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (width = 1080px) {
     h1 {
         font-size: 75px;
+    }
+
+    .breadcrumb {
+        height: 100px;
     }
 
     .breadcrumb a {
         height: 130px;
         line-height: 130px;
+        font-size: 60px;
+        margin-right: 20px;
+        padding: 0 10px;
+    }
+
+    .breadcrumb .location a::before, .breadcrumb .location a::after {
+        border-width: 65px 10px;
     }
 }
