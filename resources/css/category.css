@@ -24,16 +24,14 @@
 
 @media screen and (max-width: 1300px) {
     .folders {
-        display: flex;
         align-items: center;
-        justify-content: center;
 }
 
     .folders li {
-        display: block;
+        display: flex;
         width: 75%;
         padding: 10px;
-        margin: 10px 0;
+        margin: 10px auto;
     }
 
     .folders a {
