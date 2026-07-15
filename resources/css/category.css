@@ -30,7 +30,7 @@
 }
 
     .folders li {
-        display: flex;
+        display: block;
         width: 75%;
         padding: 10px;
         margin: 10px 0;
