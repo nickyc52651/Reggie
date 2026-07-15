@@ -22,7 +22,7 @@
     background-color: rgb(114,0,0)
 }
 
-@media screen and (width = 1080px) {
+@media screen and (max-width: 450px) {
     .folders {
         align-items: center;
     }
