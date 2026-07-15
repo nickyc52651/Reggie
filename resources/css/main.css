@@ -55,7 +55,7 @@
     border-left-color: rgb(114,0,0);
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 1300px) {
     h1 {
         font-size: 75px;
     }
