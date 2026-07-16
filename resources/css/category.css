@@ -25,6 +25,7 @@
 @media screen and (max-width: 1300px) {
     .folders {
         align-items: center;
+        justify-content: center;
     }
 
     .folders li {
@@ -36,5 +37,6 @@
 
     .folders a {
         font-size: 40px;
+        text-align: center;
     }
 }
