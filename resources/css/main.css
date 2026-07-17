@@ -4,6 +4,7 @@
 
 .breadcrumb {
     text-align: left;
+    z-index: 1;
 }
 
 .breadcrumb li {

@@ -1,0 +1,22 @@
+.sidenav {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 160px;
+    z-index: 1;
+    background-color: darkslategray;
+    overflow-x: hidden;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+.main {
+    margin-left: 160px; /*Must be the same as the sidenav width */
+    padding: 0px 10px;
+}
+
+@media screen and (max-width: 1300px) {
+    .sidenav {
+        top: 152px;
+    }
+}
