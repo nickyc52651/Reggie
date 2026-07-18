@@ -37,6 +37,10 @@
 }
 
 @media screen and (max-width: 450px) {
+    h1 {
+        font-size: 60px;
+        text-align: center;
+    }
     .folder {
         width: 95%;
     }
