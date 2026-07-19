@@ -6,8 +6,7 @@
     z-index: 1;
     background-color: darkslategray;
     overflow-x: hidden;
-    padding-top: 20px;
-    padding-left: 10px;
+    padding: 20px;
 }
 
 .main {
@@ -15,8 +14,38 @@
     padding: 0px 10px;
 }
 
+.sidenav a {
+    color: black;
+}
+
 @media screen and (max-width: 1300px) {
     .sidenav {
-        top: 152px;
+        top: 100px;
+    }
+
+    .main {
+        margin-left: 160px;
+    }
+
+    .main h1 {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .sidenav {
+        top: 90px;
+        position: static;
+        display: block;
+        width: 100%;
+    }
+
+    .main {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .sidenav h2 {
+        text-align: center;
     }
 }

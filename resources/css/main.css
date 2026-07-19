@@ -5,6 +5,7 @@
 .breadcrumb {
     text-align: left;
     z-index: 1;
+    padding-left: 20px;
 }
 
 .breadcrumb li {
@@ -58,24 +59,60 @@
 
 @media screen and (max-width: 1300px) {
     h1 {
-        font-size: 75px;
+        font-size: 60px;
         clear: both;
     }
 
     .breadcrumb {
-        height: 120px;
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+        height: 92px;
+        margin-top: 0;
     }
 
     .breadcrumb a {
-        height: 120px;
-        line-height: 120px;
-        font-size: 50px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 20px;
         margin-top: 5px;
         margin-right: 20px;
         padding: 0 10px;
     }
 
     .breadcrumb .location a::before, .breadcrumb .location a::after {
-        border-width: 60px 10px;
+        border-width: 30px 10px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .breadcrumb {
+        height: 60px;
+        padding-left: 0;
+    }
+
+    .breadcrumb a {
+        height: 60px;
+        line-height: 60px;
+        font-size: 30px;
+        margin-right: 5px;
+    }
+
+    .breadcrumb .location a::before, .breadcrumb .location a::after {
+        border-width: 0;
+        content: none;
+        border-color: none;
+        border-style: none;
+        border-width: 0;
+    }
+
+    .breadcrumb .location a::after {
+        border-color: none;
+        border-left-color: none;
+    }
+
+    .breadcrumb .location a::before {
+        left: -5px;
+        border-left-color: none;
     }
 }
