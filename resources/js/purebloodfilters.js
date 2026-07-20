@@ -2,7 +2,7 @@ function filterActive() {
   // Declare variables
   let ul = document.getElementById("houses");
   let i;
-  let li = ul.getElementsByTagName("li");
+  let li = ul.getElementsByTagName("div");
   console.log("li.length = " + li.length);
 
   // Loop through all list items, and hide those who don't match the given class
@@ -22,7 +22,7 @@ function filterExiled() {
   // Declare variables
   let ul = document.getElementById("houses");
   let i;
-  let li = ul.getElementsByTagName("li");
+  let li = ul.getElementsByTagName("div");
   console.log("li.length = " + li.length);
 
   // Loop through all list items, and hide those who don't match the given class
@@ -42,7 +42,7 @@ function filterSacred28() {
   // Declare variables
   let ul = document.getElementById("houses");
   let i;
-  let li = ul.getElementsByTagName("li");
+  let li = ul.getElementsByTagName("div");
   console.log("li.length = " + li.length);
 
   // Loop through all list items, and hide those who don't match the given class
@@ -62,7 +62,7 @@ function filterBloodTraitor() {
   // Declare variables
   let ul = document.getElementById("houses");
   let i;
-  let li = ul.getElementsByTagName("li");
+  let li = ul.getElementsByTagName("div");
   console.log("li.length = " + li.length);
 
   // Loop through all list items, and hide those who don't match the given class
@@ -82,7 +82,7 @@ function filterUntitled() {
   // Declare variables
   let ul = document.getElementById("houses");
   let i;
-  let li = ul.getElementsByTagName("li");
+  let li = ul.getElementsByTagName("div");
   console.log("li.length = " + li.length);
 
   // Loop through all list items, and hide those who don't match the given class
@@ -102,7 +102,7 @@ function resetFilters() {
   // Declare variables
   let ul = document.getElementById("houses");
   let i;
-  let li = ul.getElementsByTagName("li");
+  let li = ul.getElementsByTagName("div");
   console.log("li.length = " + li.length);
 
   // Loop through all list items, and hide those who don't match the given class

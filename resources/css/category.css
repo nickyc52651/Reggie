@@ -38,7 +38,7 @@
 
 @media screen and (max-width: 450px) {
     h1 {
-        font-size: 60px;
+        font-size: 30px;
         text-align: center;
     }
     .folder {
@@ -46,6 +46,6 @@
     }
 
     .folder a {
-        font-size: 26px;
+        font-size: 20px;
     }
 }

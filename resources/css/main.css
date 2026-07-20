@@ -87,14 +87,14 @@
 
 @media screen and (max-width: 450px) {
     .breadcrumb {
-        height: 60px;
+        height: 36px;
         padding-left: 0;
     }
 
     .breadcrumb a {
-        height: 60px;
-        line-height: 60px;
-        font-size: 30px;
+        height: 26px;
+        line-height: 26px;
+        font-size: 12px;
         margin-right: 5px;
     }
 

@@ -34,3 +34,15 @@
         text-align: center;
     }
 }
+
+@media screen and (max-width: 450px) {
+    .filters button {
+        display: inline-flex;
+        width: max-content;
+        padding: 5px;
+        margin: 5px auto;
+        font-size: 12px;
+        height: min-content;
+        min-height: 0;
+    }
+}
