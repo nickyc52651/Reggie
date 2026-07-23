@@ -3,10 +3,12 @@
     top: 50px;
     left: 0;
     width: 160px;
+    height: 75%;
     z-index: 1;
     background-color: darkslategray;
     overflow-x: hidden;
     padding: 20px;
+    overflow: scroll;
 }
 
 .main {
