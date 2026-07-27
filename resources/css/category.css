@@ -19,7 +19,7 @@
 }
 
 .folder:hover {
-    background-color: rgb(114,0,0)
+    background-color: rgb(114,0,0);
 }
 
 @media screen and (max-width: 1300px) {

@@ -1,0 +1,21 @@
+.yearContainer {
+    width: 100%;
+    text-align: center;
+    background: darkred;
+    margin: 5px auto;
+}
+
+.yearContainer:hover {
+    background-color: rgb(114, 0, 0);
+}
+
+.yearContent {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+@media screen and (max-width: 400px) {
+    .yearContent {
+        grid-template-columns: auto auto;
+    }
+}
