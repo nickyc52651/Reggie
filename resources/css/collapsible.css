@@ -1,13 +1,50 @@
 .collapsible {
     cursor: pointer;
+    width: 100%;
+    margin-bottom: 0;
 }
 
 .content {
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.2s ease-out;
+    background-color: lightgray;
+}
+
+.content .folder {
+    width: 80%;
+    font-size: 1.5em;
+}
+
+.content .folder a {
+    font-size: 0.8em;
 }
 
 .active {
     background-color: rgb(114,0,0);
+    margin-bottom: 0;
 }
+
+@media screen and (max-width: 450px) {
+    .content .folder a {
+        font-size: 0.5em;
+    }
+}
+
+/* Every HTML doc with this css attached must include this script:
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script> */

@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="../../../resources/css/main.css">
         <link rel="stylesheet" type="text/css" href="../../../resources/css/category.css">
         <link rel="stylesheet" type="text/css" href="../../../resources/css/sidemenu.css">
+        <link rel="stylesheet" type="text/css" href="../../../resources/css/collapsible.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -24,9 +25,38 @@
         <div class="main">
             <h1>Evan Rosier</h1>
             <h2>Present At:</h2>
-            <div class="folder"><a href="../../Events/1971-08-MalfoyBall.html">08-1971: Malfoy Ball</a></div>
-            <div class="folder"><a href="../../Events/1972-09-04-RegulusFirstPotionsClass.html">09/04/1972: Regulus' First Potions Class</a></div>
-            <div class="folder"><a href="../../Events/1972-12-29-RosierGala.html">12/29/1972: Rosier Gala</a></div>
+            <div class="collapsible folder">1971</div>
+            <div class="content">
+                <div class="folder"><a href="../../Events/1971-08-MalfoyBall.html">08-1971: Malfoy Ball</a></div>
+            </div>
+
+            <div class="collapsible folder">1972</div>
+            <div class="content">
+                <div class="folder"><a href="../../Events/1972-09-04-RegulusFirstPotionsClass.html">09/04/1972: Regulus' First Potions Class</a></div>
+                <div class="folder"><a href="../../Events/1972-12-29-RosierGala.html">12/29/1972: Rosier Gala</a></div>
+            </div>
+
+            <div class="collapsible folder">1980</div>
+            <div class="content">
+                <div class="folder"><a href="../../Events/1980/1980-03-16-SelwynManorBreakIn.html">03/16: Selwyn Manor Break-In</a></div>
+            </div>
         </div>
     </body>
 </html>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>

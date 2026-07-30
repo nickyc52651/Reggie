@@ -4,12 +4,14 @@
     border: 1px black solid;
     min-height: 100px;
     margin: 10px auto;
-    min-width: 25%;
-    width: max-content;
+    width: 100%;
     padding: 0 10px;
     justify-content: center;
     align-items: center;
     background-color: darkred;
+    color: #fff;
+    text-decoration: underline;
+    text-transform: uppercase;
 }
 
 .folder a {
@@ -25,9 +27,10 @@
 @media screen and (max-width: 1300px) {
     .folder {
         display: flex;
-        width: 75%;
         padding: 10px;
         margin: 10px auto;
+        font-size: 30px;
+        text-align: center;
     }
 
     .folder a {
@@ -41,8 +44,10 @@
         font-size: 30px;
         text-align: center;
     }
+
     .folder {
-        width: 95%;
+        font-size: 20px;
+        min-height: 0;
     }
 
     .folder a {

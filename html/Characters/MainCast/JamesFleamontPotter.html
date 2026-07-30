@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="../../../resources/css/main.css">
         <link rel="stylesheet" type="text/css" href="../../../resources/css/category.css">
         <link rel="stylesheet" type="text/css" href="../../../resources/css/sidemenu.css">
+        <link rel="stylesheet" type="text/css" href="../../../resources/css/collapsible.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -23,16 +24,46 @@
             <ul>
                 <li>Was grateful to get to the Astronomy Tower in time during the <a href="../../Events/1978/1978-11-03-AstronomyTowerMeeting.html">Astronomy Tower meeting in sixth year</a></li>
             </ul>
+
             <h2>Appears In:</h2>
-            <div class="folder"><a href="../../Events/1971/1971-09-23-JamesAndSiriusGoFlying.html">09/23/1971: James and Sirius Go Flying</a></div>
-            <div class="folder"><a href="../../Events/1971/1971-10-MaraudersKitchenRun.html">10/1971: Marauders Kitchen Run</a></div>
-            <div class="folder"><a href="../../Events/1980-03-17-DamasosVisitsGrimmauld.html">03/17/1980: Damasos Visits Grimmauld</a></div>
-            <div class="folder"><a href="../../Events/1980-03-17-LuciusRegulusAndJamesTalkInTheLibrary.html">03/17/1980: Lucius, Regulus, and James talk in the library</a></div>
-            <div class="folder"><a href="../../Events/1980-03-17-ShackleboltApologizes.html">03/17/1980: Shacklebolt Apologizes</a></div>
-            <div class="folder"><a href="../../Events/DaggerInterview.html">Dagger Interview Part 2</a></div>
+            <div class="collapsible folder">1971</div>
+            <div class="content">
+                <div class="folder"><a href="../../Events/1971/1971-09-23-JamesAndSiriusGoFlying.html">09/23/1971: James and Sirius Go Flying</a></div>
+                <div class="folder"><a href="../../Events/1971/1971-10-MaraudersKitchenRun.html">10/1971: Marauders Kitchen Run</a></div>
+                <div class="folder"><a href="../../Events/1971/1971-10-SiriusandJamesLibraryRun.html">10/1971: Sirius and James Library Run</a></div>
+                <div class="folder"><a href="../../Events/1971/1971-10-JamesJinxesMulciberAlly.html">10/1971: James Jinxes Mulciber's Ally</a></div>
+            </div>
+
+            <div class="collapsible folder">1980</div>
+            <div class="content">
+                <div class="folder"><a href="../../Events/1980/1980-01-OrionBurnsPotterManor.html">01: Orion Burns Potter Manor</a></div>
+                <div class="folder"><a href="../../Events/1980/1980-03-16-SelwynManorBreakIn.html">03/16: Selwyn Manor Break-In</a></div>
+                <div class="folder"><a href="../../Events/1980-03-17-DamasosVisitsGrimmauld.html">03/17: Damasos Visits Grimmauld</a></div>
+                <div class="folder"><a href="../../Events/1980/1980-03-17-TeaLectureTheosLetter.html">03/17: Tea Lecture/Theo's Letter</a></div>
+                <div class="folder"><a href="../../Events/1980-03-17-LuciusRegulusAndJamesTalkInTheLibrary.html">03/17: Lucius, Regulus, and James talk in the library</a></div>
+                <div class="folder"><a href="../../Events/1980-03-17-ShackleboltApologizes.html">03/17: Shacklebolt Apologizes</a></div>
+                <div class="folder"><a href="../../Events/DaggerInterview.html">03/17: Dagger Interview Part 2</a></div>
+            </div>
             
             <h2>Related Span Events:</h2>
             <div class="folder"><a href="../../Events/SpanEvents/CassianAbusingEvan.html">Cassian Abusing Evan</a></div>
         </div>
     </body>
 </html>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>
