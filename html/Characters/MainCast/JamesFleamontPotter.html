@@ -32,6 +32,25 @@
                 <div class="folder"><a href="../../Events/1971/1971-10-MaraudersKitchenRun.html">10/1971: Marauders Kitchen Run</a></div>
                 <div class="folder"><a href="../../Events/1971/1971-10-SiriusandJamesLibraryRun.html">10/1971: Sirius and James Library Run</a></div>
                 <div class="folder"><a href="../../Events/1971/1971-10-JamesJinxesMulciberAlly.html">10/1971: James Jinxes Mulciber's Ally</a></div>
+                <div class="folder"><a href="../../Events/1971/11/SiriusBloodSlurPromise.html">11: Sirius' Blood Slur Promise</a></div>
+            </div>
+
+            <div class="collapsible folder">1972</div>
+            <div class="content">
+                <div class="collapsible folder">January</div>
+                <div class="content">
+                    <div class="folder"><a href="../../Events/1972/01/1972-01-02-MaraudersEatChristmasCandy.html">02: Marauders Eat Christmas Candy</a></div>
+                    <div class="folder"><a href="../../Events/1972/01/1972-01-09-JamesAndSiriusDiscussUnforgivables.html">09: James and Sirius Discuss Unforgivables</a></div>
+                </div>
+                <div class="collapsible folder">March</div>
+                <div class="content">
+                    <div class="folder"><a href="../../Events/1972/03/1972-03-SlytherinCauldronFrogs.html">Unknown: Slytherin Cauldron Frogs</a></div>
+                </div>
+                <div class="collapsible folder">September</div>
+                <div class="content">
+                    <div class="folder"><a href="../../Events/1972/09/1972-09-03-RegulusMeetsMarauders.html">03: Regulus Meets Marauders</a></div>
+                    <div class="folder"><a href="../../Events/1972/09/1972-09-03-OpeningFeast.html">03: Opening Feast</a></div>
+                </div>
             </div>
 
             <div class="collapsible folder">1980</div>
@@ -61,6 +80,12 @@
             var content = this.nextElementSibling;
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;
+            } else if (content.children.length > 0){
+                var childHeight = 0;
+                for (i = 0; i < content.children.length; i++) {
+                    childHeight += content.children[i].scrollHeight;
+                }
+                content.style.maxHeight = content.scrollHeight + childHeight + "px";
             } else {
                 content.style.maxHeight = content.scrollHeight + "px";
             }

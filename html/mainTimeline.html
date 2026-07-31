@@ -3,8 +3,11 @@
     <head>
         <title>SoS - Main Timeline</title>
         <link rel="stylesheet" type="text/css" href="../resources/css/main.css">
+        <link rel="stylesheet" type="text/css" href="../resources/css/category.css">
         <link rel="stylesheet" type="text/css" href="../resources/css/collapsible.css">
+        <link rel="stylesheet" type="text/css" href="../resources/css/sidemenu.css">
         <link rel="stylesheet" type="text/css" href="../resources/css/timeline.css">
+        <script src="../resources/js/timeline.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -12,161 +15,230 @@
             <li class="location"><a href="../index.html">...</a></li>
         </ul>
         <br>
-        <button type="button" class="collapsible yearContainer"><h1>Span Events:</h1></button>
-        <div class="content">
-            <ul>
-                <li><a href="Events/SpanEvents/CassianAbusingEvan.html">Cassian Abusing Evan</a></li>
-                <li><a href="Events/SpanEvents/LestrangeManorTrials.html">01/1980-Ongoing: Lestrange Manor Trials</a></li>
-            </ul>
-        </div>
-        <button type="button" class="collapsible yearContainer"><h1>1950</h1></button>
-        <div class="content yearContent">
-            <div class="monthContainer">
-                <h2>Unknown Month</h2>
-                <ul>
-                    <li><a href="Events/1950-FleamontDefendsHisMarriage.html">Fleamont Defends His Marriage</a></li>
-                    <li><a href="Events/1950-MulciberEngagementBall.html">Mulciber Engagement Ball</a></li>
+            <div class="sidenav">
+                <h2 class="collapsible">Span Events</h2>
+                <ul class="content">
+                    <li><a href="Events/SpanEvents/CassianAbusingEvan.html">Cassian Abusing Evan</a></li>
+                    <li><a href="Events/SpanEvents/WalburgaAbusingRegulus.html">Walburga Abusing Regulus</a></li>
+                    <li><a href="Events/SpanEvents/LestrangeManorTrials.html">01/1980-Ongoing: Lestrange Manor Trials</a></li>
+                </ul>
+
+                <h2 class="collapsible">Event Groups</h2>
+                <ul class="content">
+                    <li><a href="Events/EventGroups/MaraudersPranks.html">Marauders Pranks</a></li>
+                    <li><a href="Events/EventGroups/RoofChats.html">Roof Chats</a></li>
                 </ul>
             </div>
-        </div>
-        <button type="button" class="collapsible yearContainer"><h1>1961</h1></button>
-        <div class="content yearContent">
-            <div class="monthContainer">
-                <h2>June</h2>
-                <ul>
-                    <li><a href="Characters/MainCast/RegulusArcturusBlack.html">24 - Regulus Black Is Born</a></li>
-                </ul>
+        <div class="main mainTimeline">
+
+            <!-- 1950 -->
+            <div class="yearContainer" id="1950">
+                <button type="button" class="collapsible yearHeading" onclick="expandYearContainer('1950')"><h1>1950</h1></button>
+                <div class="content yearContent">
+                    <div class="monthContainer">
+                        <h2>Unknown Month</h2>
+                        <ul>
+                            <li><a href="Events/1950-FleamontDefendsHisMarriage.html">Fleamont Defends His Marriage</a></li>
+                            <li><a href="Events/1950-MulciberEngagementBall.html">Mulciber Engagement Ball</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-        <button type="button" class="collapsible yearContainer"><h1>1971</h1></button>
-        <div class="content yearContent">
-            <div class="monthContainer">
-                <h2>August</h2>
-                <ul>
-                    <li><a href="Events/1971-08-MalfoyBall.html">Malfoy Ball</a></li>
-                    <li><a href="Events/1971-08-30-RegulusAndSiriusTalkOnTheRoof.html">30 - Regulus and Sirius Talk On The Roof</a></li>
-                    <li><a href="Events/1971-08-31-SiriusSortingCeremony.html">31 - Sirius Sorting Ceremony</a></li>
-                </ul>
+            
+            <!-- 1961 -->
+            <div class="yearContainer" id="1961">
+                <button type="button" class="collapsible yearHeading" onclick="expandYearContainer('1961')"><h1>1961</h1></button>
+                <div class="content yearContent">
+                    <div class="monthContainer">
+                        <h2>June</h2>
+                        <ul>
+                            <li><a href="Characters/MainCast/RegulusArcturusBlack.html">24 - Regulus Black Is Born</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="monthContainer">
-                <h2>September</h2>
-                <ul>
-                    <li><a href="Events/1971-09-01-SiriusFirstPotionsClass.html">01 - Sirius' First Potions Class</a></li>
-                    <li><a href="Events/1971/1971-09-10-WalburgaUsesImperiusOnRegulus.html">10 - Walburga Uses Imperius on Regulus</a></li>
-                    <li><a href="Events/1971/1971-09-17-SiriusGoesFlying.html">17 - Sirius Goes Flying</a></li>
-                    <li><a href="Events/1971/1971-09-17-WalburgaStartsBurningLetters.html">17 - Walburga starts burning letters</a></li>
-                    <li><a href="Events/1971/1971-09-20-CharmsClass.html">20 - Charms Class</a></li>
-                    <li><a href="Events/1971/1971-09-23-JamesAndSiriusGoFlying.html">23 - James and Sirius go Flying</a></li>
-                </ul>
+            
+            <!-- 1971 -->
+            <div class="yearContainer" id="1971">
+                <button type="button" class="collapsible yearHeading" onclick="expandYearContainer('1971')"><h1>1971</h1></button>
+                <div class="content yearContent">
+                    <div class="monthContainer">
+                        <h2>August</h2>
+                        <ul>
+                            <li><a href="Events/1971-08-MalfoyBall.html">Malfoy Ball</a></li>
+                            <li><a href="Events/1971-08-30-RegulusAndSiriusTalkOnTheRoof.html">30 - Regulus and Sirius Talk On The Roof</a></li>
+                            <li><a href="Events/1971-08-31-SiriusSortingCeremony.html">31 - Sirius Sorting Ceremony</a></li>
+                        </ul>
+                    </div>
+                    <div class="monthContainer">
+                        <h2>September</h2>
+                        <ul>
+                            <li><a href="Events/1971-09-01-SiriusFirstPotionsClass.html">01 - Sirius' First Potions Class</a></li>
+                            <li><a href="Events/1971/1971-09-10-WalburgaUsesImperiusOnRegulus.html">10 - Walburga Uses Imperius on Regulus</a></li>
+                            <li><a href="Events/1971/1971-09-17-SiriusGoesFlying.html">17 - Sirius Goes Flying</a></li>
+                            <li><a href="Events/1971/1971-09-17-WalburgaStartsBurningLetters.html">17 - Walburga starts burning letters</a></li>
+                            <li><a href="Events/1971/1971-09-20-CharmsClass.html">20 - Charms Class</a></li>
+                            <li><a href="Events/1971/1971-09-23-JamesAndSiriusGoFlying.html">23 - James and Sirius go Flying</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="monthContainer">
+                        <h2>October</h2>
+                        <ul>
+                            <li><a href="Events/1971/1971-10-MaraudersKitchenRun.html">Unknown Day - Marauders Kitchen Run</a></li>
+                            <li><a href="Events/1971/1971-10-SiriusandJamesLibraryRun.html">Unknown day - Sirius and James sneak into the library</a></li>
+                            <li><a href="Events/1971/1971-10-JamesJinxesMulciberAlly.html">Unknown Day - James jinxes one of Mulciber's allies</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="monthContainer">
+                        <h2>November</h2>
+                        <div class="folder"><a href="Events/1971/11/HowlerBurningDiscovered.html">Unknown - Howler Burning Discovered</a></div>
+                        <div class="folder"><a href="Events/1971/11/SiriusBloodSlurPromise.html">Unknown - Sirius' Blood Slur Promise</a></div>
+                    </div>
+
+                    <div class="monthContainer">
+                        <h2>December</h2>
+                        <div class="folder"><a href="Events/1971/12/1971-12-17-RoofChat.html">17 - Roof Chat</a></div>
+                    </div>
+                </div>
             </div>
-            <div class="monthContainer">
-                <h2>October</h2>
-                <ul>
-                    <li><a href="Events/1971/1971-10-MaraudersKitchenRun.html">Unknown Day - Marauders Kitchen Run</a></li>
-                    <li><a href="Events/1971/1971-10-SiriusandJamesLibraryRun.html">Unknown day - Sirius and James sneak into the library</a></li>
-                    <li><a href="Events/1971/1971-10-JamesJinxesMulciberAlly.html">Unknown Day - James jinxes one of Mulciber's allies</a></li>
-                </ul>
+            
+            <!-- 1972 -->
+            <div class="yearContainer" id="1972">
+                <button type="button" class="collapsible yearHeading" onclick="expandYearContainer('1972')"><h1>1972</h1></button>
+                <div class="content yearContent">
+                    <div class="monthContainer">
+                        <h2>January</h2>
+                        <div class="folder"><a href="Events/1972/01/1972-01-02-MaraudersEatChristmasCandy.html">02 - Marauders Eat Christmas Candy</a></div>
+                        <div class="folder"><a href="Events/1972/01/1972-01-09-JamesAndSiriusDiscussUnforgivables.html">09 - James and Sirius Talk about Unforgivables</a></div>
+                        <div class="folder"><a href="Events/1972/01/SiriusMuggleTransportationQuestion.html">Unknown - Sirius' Muggle Transportation Question</a></div>
+                        <div class="folder"><a href="Events/1972/01/1972-01-RegulusFirstCruciatus.html">Unknown - Regulus' First Cruciatus</a></div>
+                    </div>
+                    <div class="monthContainer">
+                        <h2>March</h2>
+                        <div class="folder"><a href="Events/1972/03/1972-03-SlytherinCauldronFrogs.html">Unknown - Slytherin Cauldron Frogs</a></div>
+                    </div>
+                    <div class="monthContainer">
+                        <h2>June</h2>
+                        <div class="folder"><a href="Events/1972/06/1972-06-WalburgaBurnsSiriusLetters.html">Unknown: Walburga Burns Siri's Letters</a></div>
+                        <div class="folder"><a href="Events/1972/06/1972-06-RoofChat.html">Unknown: Roof Chat</a></div>
+                    </div>
+                    <div class="monthContainer">
+                        <h2>August</h2>
+                        <div class="folder"><a href="Events/1972-08-MalfoyBall.html">Malfoy Ball</a></div>
+                    </div>
+                    <div class="monthContainer">
+                        <h2>September</h2>
+                        <div class="folder"><a href="Events/1972/09/1972-09-03-RegulusMeetsMarauders.html">03: Regulus meets the Marauders</a></div>
+                        <div class="folder"><a href="Events/1972/09/1972-09-03-OpeningFeast.html">03 - Hogwarts Opening Feast</a></div>
+                        <div class="folder"><a href="Events/1972-09-04-RegulusFirstPotionsClass.html">04 - Regulus' First Potions Class</a></div>
+                        <div class="folder"><a href="Events/1972/09/1972-09-08-SlughornParty.html">08: Slughorn Party</a></div>
+                    </div>
+                    <div class="monthContainer">
+                        <h2>December</h2>
+                        <ul>
+                            <li><a href="Events/1972-12-29-RosierGala.html">29 - Rosier Gala</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-        <button type="button" class="collapsible yearContainer"><h1>1972</h1></button>
-        <div class="content yearContent">
-            <div class="monthContainer">
-                <h2>August</h2>
-                <ul>
-                    <li><a href="Events/1972-08-MalfoyBall.html">Malfoy Ball</a></li>
-                </ul>
+            
+            <!-- 1977 -->
+            <div class="yearContainer" id="1977">
+                <button type="button" class="collapsible yearHeading" onclick="expandYearContainer('1977')"><h1>1977</h1></button>
+                <div class="content yearContent">
+                    <div class="monthContainer">
+                        <h2>Unknown Month</h2>
+                        <ul>
+                            <li><a href="Events/KnowlesUnforgivablesLesson.html">Knowles Unforgivables Lesson</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="monthContainer">
-                <h2>September</h2>
-                <ul>
-                    <li><a href="Events/1972-09-04-RegulusFirstPotionsClass.html">04 - Regulus' First Potions Class</a></li>
-                </ul>
+            
+            <!-- 1978 -->
+            <div class="yearContainer" id="1978">
+                <button type="button" class="collapsible yearHeading" onclick="expandYearContainer('1978')"><h1>1978</h1></button>
+                <div class="content yearContent">
+                    <div class="monthContainer">
+                        <h2>May</h2>
+                        <h3>Unknown Day</h3>
+                        <ul>
+                            <li class="partitionMemory"><a href="Events/1978-05-TheNamedVisitHogsmeade.html">(P) The Named Visit Hogsmeade</a></li>
+                        </ul>
+                    </div>
+                    <div class="monthContainer">
+                        <h2>June</h2>
+                        <h3>Unknown Day</h3>
+                        <ul>
+                            <li><a href="Events/UnforgivableArticlePublished.html">Unforgivable Article Published</a></li>
+                        </ul>
+                    </div>
+                    <div class="monthContainer">
+                        <h2>July</h2>
+                        <h3>Unknown Day</h3>
+                        <ul>
+                            <li><a href="Events/1978InitiationBall.html">Initiation Ball</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="monthContainer">
-                <h2>December</h2>
-                <ul>
-                    <li><a href="Events/1972-12-29-RosierGala.html">29 - Rosier Gala</a></li>
-                </ul>
+
+            <!-- 1979 -->
+            <div class="yearContainer" id="1979">
+                <button type="button" class="collapsible yearHeading" onclick="expandYearContainer('1979')"><h1>1979</h1></button>
+                <div class="content yearContent">
+                    <div class="monthContainer">
+                        <h2>January</h2>
+                        <ul>
+                            <li><a href="Events/1979/1979-01-RegulusFoundsVanguard.html">Unknown Day - Regulus Founds Vanguard</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-        <button type="button" class="collapsible yearContainer"><h1>1977</h1></button>
-        <div class="content yearContent">
-            <div class="monthContainer">
-                <h2>Unknown Month</h2>
-                <ul>
-                    <li><a href="Events/KnowlesUnforgivablesLesson.html">Knowles Unforgivables Lesson</a></li>
-                </ul>
-            </div>
-        </div>
-        <button type="button" class="collapsible yearContainer"><h1>1978</h1></button>
-        <div class="content yearContent">
-            <div class="monthContainer">
-                <h2>May</h2>
-                <h3>Unknown Day</h3>
-                <ul>
-                    <li class="partitionMemory"><a href="Events/1978-05-TheNamedVisitHogsmeade.html">(P) The Named Visit Hogsmeade</a></li>
-                </ul>
-            </div>
-            <div class="monthContainer">
-                <h2>June</h2>
-                <h3>Unknown Day</h3>
-                <ul>
-                    <li><a href="Events/UnforgivableArticlePublished.html">Unforgivable Article Published</a></li>
-                </ul>
-            </div>
-            <div class="monthContainer">
-                <h2>July</h2>
-                <h3>Unknown Day</h3>
-                <ul>
-                    <li><a href="Events/1978InitiationBall.html">Initiation Ball</a></li>
-                </ul>
-            </div>
-        </div>
-        <button type="button" class="collapsible yearContainer"><h1>1979</h1></button>
-        <div class="content yearContent">
-            <div class="monthContainer">
-                <h2>January</h2>
-                <ul>
-                    <li><a href="Events/1979/1979-01-RegulusFoundsVanguard.html">Unknown Day - Regulus Founds Vanguard</a></li>
-                </ul>
-            </div>
-        </div>
-        <button type="button" class="collapsible yearContainer"><h1>1980</h1></button>
-        <div class="content yearContent">
-            <div class="monthContainer">
-                <h2>January</h2>
-                <h3>Unknown Day</h3>
-                <ul>
-                    <li class="partitionMemory"><a href="Events/1980-01-PettigrewDies.html">(P) Peter Pettigrew Dies</a></li>
-                    <li class="partitionMemory"><a href="Events/1980/1980-01-BellatrixDies.html">Bellatrix Dies</a></li>
-                    <li class="partitionMemory"><a href="Events/1980/1980-01-OrionBurnsPotterManor.html">(P) Orion Burns Potter Manor</a></li>
-                </ul>
-            </div>
-            <div class="monthContainer">
-                <h2>February</h2>
-                <ul>
-                    <li><a href="Events/1980/1980-02-RegulusAndCassianAlone.html">Unknown - Regulus And Cassian Alone</a></li>
-                    <li><a href="Events/1980/1980-02-CassianRosierDies.html">Unknown - Cassian Rosier Dies</a></li>
-                </ul>
-            </div>
-            <div class="monthContainer">
-                <h2>March</h2>
-                <ul>
-                    <li><a href="Events/1980/1980-03-16-SelwynManorBreakIn.html">16 - Selwyn Manor Break-In</a></li>
-                    <li><a href="Events/DaggerInterview.html">16 - Dagger Interview, Part 1</a></li>
-                    <li><a href="Events/1980-03-17-DamasosVisitsGrimmauld.html">17 - Damasos Visits Grimmauld</a></li>
-                    <li><a href="Events/1980/1980-03-17-GreengrassVisitsGrimmauld.html">17 - Lord Greengrass Visits Grimmauld</a></li>
-                    <li><a href="Events/1980/1980-03-17-TeaLectureTheosLetter.html">17 - Tea Lecture/Theo's Letter</a></li>
-                    <li><a href="Events/1980-03-17-LuciusRegulusAndJamesTalkInTheLibrary.html">17 - Lucius, Regulus, and James talk in the library</a></li>
-                    <li><a href="Events/1980-03-17-ShackleboltApologizes.html">17 - Shacklebolt Apologizes</a></li>
-                    <li><a href="Events/DaggerInterview.html">17 - Dagger Interview, Pt 2</a></li>
-                    <li><a href="Events/1980/1980-03-17-RousseauAppointment.html">17 - Rousseau Appointment - Memory Recovered</a></li>
-                    <li><a href="Events/1980/1980-03-17-CookingwithKreacher.html">17 - Cooking with Kreacher</a></li>
-                </ul>
+
+            <!-- 1980 -->
+            <div class="yearContainer" id="1980">
+                <button type="button" class="collapsible yearHeading" onclick="expandYearContainer('1980')"><h1>1980</h1></button>
+                <div class="content yearContent">
+                    <div class="monthContainer">
+                        <h2>January</h2>
+                        <h3>Unknown Day</h3>
+                        <ul>
+                            <li class="partitionMemory"><a href="Events/1980-01-PettigrewDies.html">(P) Peter Pettigrew Dies</a></li>
+                            <li class="partitionMemory"><a href="Events/1980/1980-01-BellatrixDies.html">Bellatrix Dies</a></li>
+                            <li class="partitionMemory"><a href="Events/1980/1980-01-OrionBurnsPotterManor.html">(P) Orion Burns Potter Manor</a></li>
+                        </ul>
+                    </div>
+                    <div class="monthContainer">
+                        <h2>February</h2>
+                        <ul>
+                            <li><a href="Events/1980/1980-02-RegulusAndCassianAlone.html">Unknown - Regulus And Cassian Alone</a></li>
+                            <li><a href="Events/1980/1980-02-CassianRosierDies.html">Unknown - Cassian Rosier Dies</a></li>
+                        </ul>
+                    </div>
+                    <div class="monthContainer">
+                        <h2>March</h2>
+                        <ul>
+                            <li><a href="Events/1980/1980-03-16-SelwynManorBreakIn.html">16 - Selwyn Manor Break-In</a></li>
+                            <li><a href="Events/DaggerInterview.html">16 - Dagger Interview, Part 1</a></li>
+                            <li><a href="Events/1980-03-17-DamasosVisitsGrimmauld.html">17 - Damasos Visits Grimmauld</a></li>
+                            <li><a href="Events/1980/1980-03-17-GreengrassVisitsGrimmauld.html">17 - Lord Greengrass Visits Grimmauld</a></li>
+                            <li><a href="Events/1980/1980-03-17-TeaLectureTheosLetter.html">17 - Tea Lecture/Theo's Letter</a></li>
+                            <li><a href="Events/1980-03-17-LuciusRegulusAndJamesTalkInTheLibrary.html">17 - Lucius, Regulus, and James talk in the library</a></li>
+                            <li><a href="Events/1980-03-17-ShackleboltApologizes.html">17 - Shacklebolt Apologizes</a></li>
+                            <li><a href="Events/DaggerInterview.html">17 - Dagger Interview, Pt 2</a></li>
+                            <li><a href="Events/1980/1980-03-17-RousseauAppointment.html">17 - Rousseau Appointment - Memory Recovered</a></li>
+                            <li><a href="Events/1980/1980-03-17-CookingwithKreacher.html">17 - Cooking with Kreacher</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
 </html>
+
 <script>
     var coll = document.getElementsByClassName("collapsible");
     var i;
@@ -177,6 +249,12 @@
             var content = this.nextElementSibling;
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;
+            } else if (content.children.length > 0){
+                var childHeight = 0;
+                for (i = 0; i < content.children.length; i++) {
+                    childHeight += content.children[i].scrollHeight;
+                }
+                content.style.maxHeight = content.scrollHeight + childHeight + "px";
             } else {
                 content.style.maxHeight = content.scrollHeight + "px";
             }

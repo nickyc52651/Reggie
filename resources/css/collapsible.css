@@ -9,6 +9,7 @@
     max-height: 0;
     transition: max-height 0.2s ease-out;
     background-color: lightgray;
+    margin-top: 0;
 }
 
 .content .folder {
@@ -18,6 +19,11 @@
 
 .content .folder a {
     font-size: 0.8em;
+}
+
+.sidenav h2.collapsible {
+    border: 1px black solid;
+    text-align: center;
 }
 
 .active {
@@ -42,6 +48,12 @@
             var content = this.nextElementSibling;
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;
+            } else if (content.children.length > 0){
+                var childHeight = 0;
+                for (i = 0; i < content.children.length; i++) {
+                    childHeight += content.children[i].scrollHeight;
+                }
+                content.style.maxHeight = content.scrollHeight + childHeight + "px";
             } else {
                 content.style.maxHeight = content.scrollHeight + "px";
             }

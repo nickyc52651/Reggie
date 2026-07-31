@@ -1,17 +1,37 @@
+.mainTimeline {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
 .yearContainer {
-    width: 100%;
+    transition: gridColumn 0.5s ease-out;
+}
+
+.yearHeading {
     text-align: center;
     background: darkred;
     margin: 5px auto;
 }
 
-.yearContainer:hover {
+.yearHeading.active {
+    margin-bottom: 0;
+}
+
+.yearHeading:hover {
     background-color: rgb(114, 0, 0);
+}
+
+.yearHeading h1 {
+    margin: 10px;
+    color: #fff;
+    font-weight: normal;
+    font-size: 2em;
+    text-decoration: underline;
 }
 
 .yearContent {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 25% 25% 25% 25%;
 }
 
 .monthContainer {
@@ -19,7 +39,27 @@
     border: 1px black solid;
 }
 
-@media screen and (max-width: 400px) {
+.monthContainer .folder {
+    text-decoration: none;
+    min-height: min-content;
+    padding: 5px;
+}
+
+.monthContainer .folder a {
+    font-size: 16px;
+    text-transform: none;
+    text-decoration: none;
+}
+
+.monthContainer h2 {
+    text-align: center;
+}
+
+@media screen and (max-width: 450px) {
+    .mainTimeline {
+        grid-template-columns: 50% 50%;
+    }
+
     .yearContent {
         grid-template-columns: auto auto;
     }

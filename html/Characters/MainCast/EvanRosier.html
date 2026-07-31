@@ -32,8 +32,15 @@
 
             <div class="collapsible folder">1972</div>
             <div class="content">
-                <div class="folder"><a href="../../Events/1972-09-04-RegulusFirstPotionsClass.html">09/04/1972: Regulus' First Potions Class</a></div>
-                <div class="folder"><a href="../../Events/1972-12-29-RosierGala.html">12/29/1972: Rosier Gala</a></div>
+                <div class="collapsible folder">September</div>
+                <div class="content">
+                    <div class="folder"><a href="../../Events/1972/09/1972-09-03-OpeningFeast.html">03: Opening Feast</a></div>
+                    <div class="folder"><a href="../../Events/1972-09-04-RegulusFirstPotionsClass.html">09/04/1972: Regulus' First Potions Class</a></div>
+                </div>
+                <div class="collapsible folder">December</div>
+                <div class="content">
+                    <div class="folder"><a href="../../Events/1972-12-29-RosierGala.html">12/29/1972: Rosier Gala</a></div>
+                </div>
             </div>
 
             <div class="collapsible folder">1980</div>
@@ -54,6 +61,12 @@
             var content = this.nextElementSibling;
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;
+            } else if (content.children.length > 0){
+                var childHeight = 0;
+                for (i = 0; i < content.children.length; i++) {
+                    childHeight += content.children[i].scrollHeight;
+                }
+                content.style.maxHeight = content.scrollHeight + childHeight + "px";
             } else {
                 content.style.maxHeight = content.scrollHeight + "px";
             }
