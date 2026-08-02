@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="../../../resources/css/main.css">
         <link rel="stylesheet" type="text/css" href="../../../resources/css/category.css">
         <link rel="stylesheet" type="text/css" href="../../../resources/css/sidemenu.css">
+        <link rel="stylesheet" type="text/css" href="../../../resources/css/collapsible.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -29,7 +30,34 @@
             </ul>
 
             <h2>Appears In:</h2>
+            <div class="collapsible folder">1972</div>
+            <div class="content">
+                <div class="folder"><a href="../../Events/1972/09/06-JamesHexesSelwyn.html">09/06: James Hexes Selwyn</a></div>
+            </div>
             <div class="folder"><a href="../../Events/1980/1980-03-16-SelwynManorBreakIn.html">03/16/1980: Selwyn Manor Break-In</a></div>
         </div>
     </body>
 </html>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else if (content.children.length > 0){
+                var childHeight = 0;
+                for (i = 0; i < content.children.length; i++) {
+                    childHeight += content.children[i].scrollHeight;
+                }
+                content.style.maxHeight = content.scrollHeight + childHeight + "px";
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>
