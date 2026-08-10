@@ -3,6 +3,10 @@
     <head>
         <title>Leo Davidson</title>
         <link rel="stylesheet" type="text/css" href="../../../resources/css/main.css">
+        <link rel="stylesheet" type="text/css" href="../../../resources/css/category.css">
+        <link rel="stylesheet" type="text/css" href="../../../resources/css/sidemenu.css">
+        <link rel="stylesheet" type="text/css" href="../../../resources/css/collapsible.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <ul class="breadcrumb">
@@ -10,11 +14,47 @@
             <li class="location"><a href="../../Characters.html">Characters</a></li>
             <li class="location"><a href="../DeathEaters.html">Death Eaters</a></li>
         </ul>
-        <br>
-        <h1>Leo Davidson</h1>
-        <h2>Known Facts:</h2>
-        <ul>
-            <li>Focused on finding artifacts for The Steward's team (SoS 161)</li>
-        </ul>
+        <br>    
+        <div class="sidenav">
+            <h2>Basic Info:</h2>
+            <p>Born:</p>
+            <p>Affiliations:</p>
+            <ul>
+                <li><a>Organization</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <h1>Leo Davidson</h1>
+            <h2>Known Facts:</h2>
+            <ul>
+                <li>Focused on finding artifacts for The Steward's team (SoS 161)</li>
+                <li>Invited members of The Dagger's team to Lestrange's parties (SoS 162)</li>
+            </ul>
+            
+            <h2>Appears In:</h2>
+        </div>
     </body>
 </html>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else if (content.children.length > 0){
+                var childHeight = 0;
+                for (i = 0; i < content.children.length; i++) {
+                    childHeight += content.children[i].scrollHeight;
+                }
+                content.style.maxHeight = content.scrollHeight + childHeight + "px";
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Date: Title</title>
+        <title>03/19/1980: Press Conference</title>
         <link rel="stylesheet" type="text/css" href="../../../../resources/css/main.css">
         <link rel="stylesheet" type="text/css" href="../../../../resources/css/category.css">
         <link rel="stylesheet" type="text/css" href="../../../../resources/css/sidemenu.css">
@@ -19,7 +19,7 @@
             <p><a>Previous Event</a></p>
             <p><a>Next Event</a></p>
             <p>Happens In: Unknown</p>
-            <p>Mentioned In: N/A</p>
+            <p>Mentioned In: SoS 162</p>
             <p>Location: <a>Here</a></p>
             <p>Characters Present:</p>
             <ul>
@@ -36,7 +36,7 @@
             </ul>
             <p class="collapsible">Related Events:</p>
             <ul class="content">
-                <li><a>Event</a></li>
+                <li><a href="./18-FrankHelpsPostNightmare.html">03/18/1980: Frank Helps Post-Nightmare</a></li>
             </ul>
             <p class="collapsible">Related Documents:</p>
             <ul class="content">
@@ -44,31 +44,9 @@
             </ul>
         </div>
         <div class="main">
-            <h1>Date: Title</h1>
+            <h1>03/19/1980: Press Conference</h1>
             <h2>Summary:</h2>
+
         </div>
     </body>
 </html>
-
-<script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-
-    for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else if (content.children.length > 0){
-                var childHeight = 0;
-                for (i = 0; i < content.children.length; i++) {
-                    childHeight += content.children[i].scrollHeight;
-                }
-                content.style.maxHeight = content.scrollHeight + childHeight + "px";
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
-        });
-    }
-</script>

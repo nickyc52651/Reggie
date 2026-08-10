@@ -21,7 +21,7 @@
     font-size: 0.8em;
 }
 
-.sidenav h2.collapsible {
+.sidenav h2.collapsible, .sidenav p.collapsible {
     border: 1px black solid;
     text-align: center;
 }
