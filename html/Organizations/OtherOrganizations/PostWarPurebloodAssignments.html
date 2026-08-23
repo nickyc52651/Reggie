@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Post-War Pureblood Assignments</title>
+        <link rel="stylesheet" type="text/css" href="../../resources/css/main.css">
+        <link rel="stylesheet" type="text/css" href="../../resources/css/category.css">
+        <link rel="stylesheet" type="text/css" href="../../resources/css/sidemenu.css">
+        <link rel="stylesheet" type="text/css" href="../../resources/css/collapsible.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <ul class="breadcrumb">
+            <li class="location"><a href="../../../index.html">...</a></li>
+            <li class="location"><a href="../../Organizations.html">Organizations</a></li>
+            <li class="location"><a href="../OtherOrganizations.html">Other</a></li>
+            <!-- Continue breadcrumbs -->
+        </ul>
+        <h1>Post-War Pureblood Assignments</h1>
+        <p>Literally just a holding page for these assignments - the teams don't need their own page.</p>
+
+        <h2>The Teams:</h2>
+        <div class="folder-container">
+            <div class="collapsible folder">Evan's Team</div>
+            <div class="content">
+                <ul>
+                    <li><a href="../PurebloodSociety/HouseGoyle.html">House Goyle</a> (<a href="../../Documents/Letters/PersonalLetters/03-1980/18-RegulusToGoyles.html">SoS 162</a>)</li>
+                </ul>
+            </div>
+
+            <div class="collapsible folder">Barty's Team</div>
+            <div class="content">
+                <ul>
+                    <li><a href="../PurebloodSociety/HouseFawley.html">House Fawley</a> (<a href="../../Documents/Letters/PersonalLetters/03-1980/18-RegulusToFawley.html">SoS 162</a>)</li>
+                    <li><a href="../PurebloodSociety/HouseFlint.html">House Flint</a> (<a href="../../Documents/Letters/PersonalLetters/03-1980/18-RegulusToFlint.html">SoS 162</a>)</li>
+                    <li><a href="../PurebloodSociety/HouseTravers.html">House Travers</a> (<a href="../../Documents/Letters/PersonalLetters/03-1980/18-RegulusToTravers.html">SoS 162</a>)</li>
+                </ul>
+            </div>
+
+            <div class="collapsible folder">Lucius' Team</div>
+            <div class="content">
+                <ul>
+                    <li><a href="../PurebloodSociety/HouseCrabbe.html">House Crabbe</a> (<a href="../../Documents/Letters/PersonalLetters/03-1980/18-RegulusToCrabbe.html">SoS 162</a>)</li>
+                </ul>
+            </div>
+
+            <div class="collapsible folder">James' Team</div>
+            <div class="content">
+                <ul>
+                    <li><a href="../PurebloodSociety/HouseMacmillan.html">House Macmillan</a> (<a href="../../Documents/Letters/PersonalLetters/03-1980/18-RegulusToMacmillan.html">SoS 162</a>)</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else if (content.children.length > 0){
+                var childHeight = 0;
+                for (i = 0; i < content.children.length; i++) {
+                    childHeight += content.children[i].scrollHeight;
+                }
+                content.style.maxHeight = content.scrollHeight + childHeight + "px";
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>

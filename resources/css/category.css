@@ -1,3 +1,9 @@
+.folder-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+}
+
 .folder {
     display: inline-flex;
     list-style: none;
@@ -24,7 +30,11 @@
     background-color: rgb(114,0,0);
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1000px) {
+    .folder-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .folder {
         display: flex;
         padding: 10px;
@@ -40,6 +50,10 @@
 }
 
 @media screen and (max-width: 450px) {
+    .folder-container {
+        display: inline;
+    }
+
     h1 {
         font-size: 30px;
         text-align: center;

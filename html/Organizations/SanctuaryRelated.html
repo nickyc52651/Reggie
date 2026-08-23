@@ -4,14 +4,66 @@
         <title>Sanctuary</title>
         <link rel="stylesheet" type="text/css" href="../../resources/css/main.css">
         <link rel="stylesheet" type="text/css" href="../../resources/css/category.css">
+        <link rel="stylesheet" type="text/css" href="../../resources/css/sidemenu.css">
+        <link rel="stylesheet" type="text/css" href="../../resources/css/collapsible.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <ul class="breadcrumb">
             <li class="location"><a href="../../index.html">...</a></li>
             <li class="location"><a href="../Organizations.html">Organizations</a></li>
         </ul>
-        <br>
-        <h1>Sanctuary</h1>
-        <h2>Known Members</h2>
+        <div class="sidenav">
+            <h2>Basic Info:</h2>
+            <p class="collapsible">Known Members:</p>
+            <ul class="content">
+                <li><a href="../Characters/Purebloods/Active/AngelicaBloodworth.html">Angelica Bloodworth</a></li>
+            </ul>
+
+            <p class="collapsible">Sub-Organizations:</p>
+            <ul class="content">
+                <li><a href="">None</a></li>
+            </ul>
+
+            <p class="collapsible">Related Documents:</p>
+            <!-- Documents that mention this organization -->
+            <ul class="content">
+                <li><a href="../Documents/Letters/PersonalLetters/03-1980/18-RegulusToAngelica.html">03/18/1980: Regulus to Angelica</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <h1>Sanctuary</h1>
+
+            <h2>Known Facts:</h2>
+
+            <h2>Known Actions:</h2>
+            <!-- Any events where this organization was the reason for the event -->
+
+            <h2>Known Documents:</h2>
+            <!-- Documents created by this organization -->
+        </div>
     </body>
 </html>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else if (content.children.length > 0){
+                var childHeight = 0;
+                for (i = 0; i < content.children.length; i++) {
+                    childHeight += content.children[i].scrollHeight;
+                }
+                content.style.maxHeight = content.scrollHeight + childHeight + "px";
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>
