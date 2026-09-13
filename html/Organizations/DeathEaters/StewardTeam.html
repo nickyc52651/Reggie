@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Steward's Team</title>
+        <!-- Link to main.css -->
+        <link rel="stylesheet" type="text/css" href="../../../resources/css/main.css">
+        <!-- Link to category.css -->
+        <link rel="stylesheet" type="text/css" href="../../../resources/css/category.css">
+        <!-- Link to sidemenu.css -->
+        <link rel="stylesheet" type="text/css" href="../../../resources/css/sidemenu.css">
+        <!-- Link to collapsible.css -->
+        <link rel="stylesheet" type="text/css" href="../../../resources/css/collapsible.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <ul class="breadcrumb">
+            <li class="location"><a href="../../../index.html">...</a></li>
+            <li class="location"><a href="../../Organizations.html">Organizations</a></li>
+            <li class="location"><a href="../DeathEaters.html">Death Eater</a></li>
+        </ul>
+        <div class="sidenav">
+            <h2>Basic Info:</h2>
+            <p class="collapsible">Known Members:</p>
+            <ul class="content">
+                <li><a href="../../Characters/Purebloods/Active/CasparAvery.html">Caspar Avery</a></li>
+                <li><a href="../../Characters/Purebloods/Active/VincentCrabbe.html">Vincent Crabbe (after Regulus' defection)</a></li>
+                <li><a href="../../Characters/Purebloods/Active/WaldenMacnair.html">Walden Macnair (after Regulus' defection)</a></li>
+                <li><a href="../../Characters/Purebloods/Active/ChristopherAvery.html">Christopher Avery (after The Hunter's death)</a></li>
+            </ul>
+
+            <p class="collapsible">Related Documents:</p>
+            <!-- Documents that mention this organization -->
+            <ul class="content">
+                <li><a href="">None</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <h1>The Steward's Team</h1>
+
+            <h2>Known Facts:</h2>
+
+            <h2>Known Actions:</h2>
+            <!-- Any events where this organization was the reason for the event -->
+
+            <h2>Known Documents:</h2>
+            <!-- Any documents created by this organization -->
+        </div>
+    </body>
+</html>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else if (content.children.length > 0){
+                var childHeight = 0;
+                for (i = 0; i < content.children.length; i++) {
+                    childHeight += content.children[i].scrollHeight;
+                }
+                content.style.maxHeight = content.scrollHeight + childHeight + "px";
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>

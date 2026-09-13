@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Priscilla Crabbe</title>
+        <!-- Link to main.css -->
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/main.css">
+        <!-- Link to category.css -->
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/category.css">
+        <!-- Link to sidemenu.css -->
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/sidemenu.css">
+        <!-- Link to collapsible.css -->
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/collapsible.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <ul class="breadcrumb">
+            <li class="location"><a href="../../../../index.html">...</a></li>
+            <li class="location"><a href="../../../Characters.html">Characters</a></li>
+            <li class="location"><a href="../../Purebloods.html">Purebloods</a></li>
+            <li class="location"><a href="../ActivePurebloods.html">Active</a></li>
+        </ul>
+        <br>    
+        <div class="sidenav">
+            <h2>Basic Info:</h2>
+            <p>Born:</p>
+            <p>Affiliations:</p>
+            <ul>
+                <li><a href="../../../Organizations/PurebloodSociety/HouseCrabbe.html">House Crabbe</a></li>
+                <li><a href="../../../Organizations/LestrangeManor/LestrangeManorClients.html">Lestrange Manor Clients</a></li>
+                <li><a href="../../../Organizations/LestrangeManor/Clients/MemoryClients.html">Memory Clients</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <h1>Priscilla Crabbe</h1>
+            <h2>Known Facts:</h2>
+            
+            <h2>Appears In:</h2>
+        </div>
+    </body>
+</html>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else if (content.children.length > 0){
+                var childHeight = 0;
+                for (i = 0; i < content.children.length; i++) {
+                    childHeight += content.children[i].scrollHeight;
+                }
+                content.style.maxHeight = content.scrollHeight + childHeight + "px";
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>
