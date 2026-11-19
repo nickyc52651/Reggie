@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>09/08/1972: Poults Cauldron Incident</title>
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/main.css">
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/category.css">
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/sidemenu.css">
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/collapsible.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <ul class="breadcrumb">
+            <li class="location"><a href="../../../../index.html">...</a></li>
+            <li class="location"><a href="../../../mainTimeline.html">Main Timeline</a></li>
+        </ul>
+        <br>
+        <div class="sidenav">
+            <h2>Basic Info:</h2>
+            <p><a href="./07-MaraudersDoseWilkes.html">Previous Event</a></p>
+            <p><a href="./1972-09-08-SlughornParty.html">Next Event</a></p>
+            <p>Happens In: SoS 5</p>
+            <p>Mentioned In: N/A</p>
+            <p>Location: <a href="../../../Locations/HogwartsLocations/Dungeons/PotionsClassroom.html">Potions Classroom</a></p>
+            <p class="collapsible">Characters Present:</p>
+            <ul class="content">
+                <li><a href="../../../Characters/HogwartsStaff/HoraceSlughorn.html">Horace Slughorn</a></li>
+                <li><a href="../../../Characters/MainCast/RegulusArcturusBlack.html">Regulus Black</a></li>
+                <li><a href="../../../Characters/MainCast/EvanRosier.html">Evan Rosier</a></li>
+                <li><a href="../../../Characters/MainCast/BartyCrouchJr.html">Barty Crouch, Jr.</a></li>
+                <li><a href="../../../Characters/MainCast/VeronicaSnowbell.html">Veronica Snowbell</a></li>
+                <li><a href="../../../Characters/MainCast/DemetriaGriffin.html">Demetria Griffin</a></li>
+                <li><a href="../../../Characters/MainCast/DawnAvery.html">Dawn Avery</a></li>
+                <li><a href="../../../Characters/Purebloods/Active/VailMacnair.html">Vail Macnair</a></li>
+                <li><a href="../../../Characters/MainCast/ThomasBlair.html">Thomas Blair</a></li>
+                <li><a href="../../../Characters/Silenced/LyleMcDaniels.html">Lyle McDaniels</a></li>
+                <li><a href="../../../Characters/HogwartsStudents/JosephPoults.html">Joseph Poults</a></li>
+                <li><a href="../../../Characters/HogwartsStudents/ForestIbex.html">Forest Ibex</a></li>
+                <li><a href="../../../Characters/HogwartsStudents/CassaCribbe.html">Cassa Cribbe</a></li>
+            </ul>
+            <p>Event Groups:</p>
+            <ul>
+                <li><a href="../../EventGroups/PotionsClasses.html">Potions Classes</a></li>
+            </ul>
+            <p>Related Organizations:</p>
+            <ul>
+                <li><a href="../../../Organizations/HogwartsRelated/HogwartsStudents/ClassOf1979.html">Class of 1979</a> - Gryffindor and Slytherin</li>
+            </ul>
+            <p class="collapsible">Related Events:</p>
+            <!-- Events that mention this event -->
+            <ul class="content">
+                <li><a>Event</a></li>
+            </ul>
+            <p class="collapsible">Related Documents:</p>
+            <!-- Documents that mention this event -->
+            <ul class="content">
+                <li><a>Document</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <h1>09/08/1972: Poults Cauldron Incident</h1>
+            <h2>Summary:</h2>
+            <p>Students are learning how to brew a simple <a href="../../../Items/Potions/HealingPotions/HealingDraught.html">Healing Draught</a></p>
+            <p>Barty attempts to introduce himself to Slughorn, but is interrupted by Joseph Poults and Forest Ibex asking about the 
+                <a href="../../1972/03/1972-03-SlytherinCauldronFrogs.html">Slytherin Cauldron Frogs</a>.</p>
+            <p>Regulus grinds some <a href="../../../Items/Ingredients/LacewingFlies.html">Lacewing Flies</a> into powder, and Evan puts them into Poults' cauldron, destabilizing his potion 
+                and making the cauldron explode. Slughorn takes 10 points from each Gryffindor for the incident.</p>
+        </div>
+    </body>
+</html>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else if (content.children.length > 0){
+                var childHeight = 0;
+                for (i = 0; i < content.children.length; i++) {
+                    childHeight += content.children[i].scrollHeight;
+                }
+                content.style.maxHeight = content.scrollHeight + childHeight + "px";
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>
