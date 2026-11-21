@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>10/1972: Pettigrew Hair Incident</title>
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/main.css">
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/category.css">
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/sidemenu.css">
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/collapsible.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <ul class="breadcrumb">
+            <li class="location"><a href="../../../../index.html">...</a></li>
+            <li class="location"><a href="../../../mainTimeline.html">Main Timeline</a></li>
+        </ul>
+        <br>
+        <div class="sidenav">
+            <h2>Basic Info:</h2>
+            <p><a>Previous Event</a></p>
+            <p><a>Next Event</a></p>
+            <p>Happens In: Unknown</p>
+            <p>Location: <a>Here</a></p>
+            <p>Characters Present:</p>
+            <ul>
+                <li><a>Character</a></li>
+            </ul>
+            <p>Part of: <a>SpanEvent</a></p>
+            <p>Event Groups:</p>
+            <ul>
+                <li><a>None</a></li>
+            </ul>
+            <p>Related Organizations:</p>
+            <ul>
+                <li><a>None</a></li>
+            </ul>
+            <p class="collapsible">Related Events:</p>
+            <!-- Events that mention this event -->
+            <ul class="content">
+                <li><a href="../09/1972-09-08-SlughornParty.html">09/08/1972: Slughorn Party</a></li>
+                <li><a href="../09/08-TheEmpireIsFounded.html">09/08/1972: The Empire Is Founded</a></li>
+            </ul>
+            <p class="collapsible">Related Documents:</p>
+            <!-- Documents that mention this event -->
+            <ul class="content">
+                <li><a>Document</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <h1>10/1972: Pettigrew Hair Incident</h1>
+            <h2>Summary:</h2>
+        </div>
+    </body>
+</html>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else if (content.children.length > 0){
+                var childHeight = 0;
+                for (i = 0; i < content.children.length; i++) {
+                    childHeight += content.children[i].scrollHeight;
+                }
+                content.style.maxHeight = content.scrollHeight + childHeight + "px";
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>

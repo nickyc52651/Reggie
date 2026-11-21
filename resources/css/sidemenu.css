@@ -2,7 +2,7 @@
     position: fixed;
     top: 50px;
     left: 0;
-    width: 200px;
+    width: 400px;
     height: 75%;
     z-index: 1;
     background-color: darkslategray;
@@ -12,7 +12,7 @@
 }
 
 .main {
-    margin-left: 200px; /*Must be the same as the sidenav width */
+    margin-left: 400px; /*Must be the same as the sidenav width */
     padding: 0px 10px;
 }
 
@@ -23,15 +23,16 @@
 @media screen and (max-width: 1300px) {
     .sidenav {
         top: 100px;
-        width: 160px;
+        width: 300px;
     }
 
     .main {
-        margin-left: 160px;
+        margin-left: 300px;
     }
 
     .main h1 {
         margin-top: 0;
+        font-size: 50px;
     }
 }
 

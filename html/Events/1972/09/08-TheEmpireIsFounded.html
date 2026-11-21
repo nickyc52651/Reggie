@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>09/08/1972: The Empire Is Founded</title>
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/main.css">
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/category.css">
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/sidemenu.css">
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/collapsible.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <ul class="breadcrumb">
+            <li class="location"><a href="../../../../index.html">...</a></li>
+            <li class="location"><a href="../../../mainTimeline.html">Main Timeline</a></li>
+        </ul>
+        <br>
+        <div class="sidenav">
+            <h2>Basic Info:</h2>
+            <p><a href="./1972-09-08-SlughornParty.html">Previous Event</a></p>
+            <p><a href="./14-SiriBumpsIntoSnape.html">Next Event</a></p>
+            <p>Happens In: SoS 6</p>
+            <p>Location: <a href="../../../Locations/HogwartsLocations/Dungeons/SkittlesDormRoom.html">Skittles Dorm Room</a></p>
+            <p class="collapsible">Characters Present:</p>
+            <ul class="content">
+                <li><a href="../../../Characters/MainCast/RegulusArcturusBlack.html">Regulus Black</a></li>
+                <li><a href="../../../Characters/MainCast/EvanRosier.html">Evan Rosier</a></li>
+            </ul>
+            <p>Related Organizations:</p>
+            <ul>
+                <li><a href="../../../Organizations/HogwartsRelated/HogwartsStudents/TheEmpire.html">The Empire</a></li>
+            </ul>
+            <p class="collapsible">Related Events:</p>
+            <!-- Events that mention this event -->
+            <ul class="content">
+                <li><a>Event</a></li>
+            </ul>
+            <p class="collapsible">Related Documents:</p>
+            <!-- Documents that mention this event -->
+            <ul class="content">
+                <li><a>Document</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <h1>09/08/1972: The Empire Is Founded</h1>
+            <h2>Summary:</h2>
+            <p>Regulus returns to the dorm after Slughorn's party and talks to Evan about his 
+                <a href="../10/PettigrewHairIncident.html">plans for Peter Pettigrew</a>. Evan informs Regulus that 
+                <a href="../../../Characters/MainCast/ThomasBlair.html">Thomas Blair</a> knows (via 
+                <a href="../../../Characters/OtherCharacters/ThomasBlairsSister.html">Thomas Blair's Sister</a>) of a 
+                <a href="../../../Locations/HogwartsLocations/ThirdFloorPassageway.html">third floor passageway</a> to Hogsmeade and is 
+                willing to share it. Regulus says he'll ask Barty to set up a meeting with Blair</p>
+            <p>Technically the founding of The Empire.</p>
+        </div>
+    </body>
+</html>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else if (content.children.length > 0){
+                var childHeight = 0;
+                for (i = 0; i < content.children.length; i++) {
+                    childHeight += content.children[i].scrollHeight;
+                }
+                content.style.maxHeight = content.scrollHeight + childHeight + "px";
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>

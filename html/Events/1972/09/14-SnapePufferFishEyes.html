@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>09/14/1972: Snape Puffer-Fish Eyes</title>
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/main.css">
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/category.css">
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/sidemenu.css">
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/collapsible.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <ul class="breadcrumb">
+            <li class="location"><a href="../../../../index.html">...</a></li>
+            <li class="location"><a href="../../../mainTimeline.html">Main Timeline</a></li>
+        </ul>
+        <br>
+        <div class="sidenav">
+            <h2>Basic Info:</h2>
+            <p><a href="./14-SiriBumpsIntoSnape.html">Previous Event</a></p>
+            <p><a>Next Event</a></p>
+            <p>Happens In: SoS 7</p>
+            <p>Location: <a href="../../../Locations/HogwartsLocations/GreatHall.html">Great Hall</a></p>
+            <p class="collapsible">Characters Present:</p>
+            <ul class="content">
+                <li><a href="../../../Characters/MainCast/BartyCrouchJr.html">Barty Crouch, Jr.</a></li>
+                <li><a href="../../../Characters/MainCast/JamesFleamontPotter.html">James Potter</a></li>
+                <li><a href="../../../Characters/MainCast/RegulusArcturusBlack.html">Regulus Black</a></li>
+                <li><a href="../../../Characters/Purebloods/Active/SeverusSnape.html">Severus Snape</a></li>
+                <li><a href="../../../Characters/MainCast/SiriusOrionBlack.html">Sirius Black</a></li>
+            </ul>
+            <p>Related Organizations:</p>
+            <ul>
+                <li><a href="../../../Organizations/HogwartsRelated/HogwartsStudents/TheEmpire.html">The Empire</a></li>
+            </ul>
+            <p class="collapsible">Related Events:</p>
+            <!-- Events that mention this event -->
+            <ul class="content">
+                <li><a>Event</a></li>
+            </ul>
+            <p class="collapsible">Related Documents:</p>
+            <!-- Documents that mention this event -->
+            <ul class="content">
+                <li><a>Document</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <h1>09/14/1972: Snape Puffer-Fish Eyes</h1>
+            <h2>Summary:</h2>
+            <p>Sirius and James are laughing about <a href="./14-SiriBumpsIntoSnape.html">bumping into Snape</a>.</p>
+            <p>Regulus tells Barty to give his <a href="../../../Items/Ingredients/PufferFishEyes.html">puffer-fish eyes</a> to Snape so they can be used as revenge.</p>
+            <p>Technically an act of The Empire</p>
+        </div>
+    </body>
+</html>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else if (content.children.length > 0){
+                var childHeight = 0;
+                for (i = 0; i < content.children.length; i++) {
+                    childHeight += content.children[i].scrollHeight;
+                }
+                content.style.maxHeight = content.scrollHeight + childHeight + "px";
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>

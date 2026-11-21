@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="../../../../resources/css/main.css">
         <link rel="stylesheet" type="text/css" href="../../../../resources/css/category.css">
         <link rel="stylesheet" type="text/css" href="../../../../resources/css/sidemenu.css">
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/collapsible.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -15,27 +16,75 @@
         <br>
         <div class="sidenav">
             <h2>Basic Info:</h2>
+            <p><a href="./08-PoultsCauldronIncident.html">Previous Event</a></p>
+            <p><a href="./08-TheEmpireIsFounded.html">Next Event</a></p>
             <p>Happens In: SoS 5-6</p>
             <p>Mentioned In: SoS 4</p>
-            <p>Location: <a>Here</a></p>
-            <p>Characters Present:</p>
-            <ul>
-                <li><a>Character</a></li>
+            <p>Location: <a>Unspecified</a></p>
+            <p class="collapsible">Characters Present:</p>
+            <ul class="content">
+                <li><a href="../../../Characters/Purebloods/Active/BellatrixLestrange.html">Bellatrix Lestrange</a></li>
+                <li><a href="../../../Characters/Purebloods/Active/CasparAvery.html">Caspar Avery</a></li>
+                <li><a href="../../../Characters/Purebloods/Active/LuciusAbraxasMalfoy.html">Lucius Malfoy</a></li>
+                <li><a href="../../../Characters/Purebloods/Active/NarcissaMalfoy.html">Narcissa Black</a></li>
+                <li><a href="../../../Characters/MainCast/RegulusArcturusBlack.html">Regulus Black</a></li>
+                <li><a href="../../../Characters/Purebloods/Active/TheodoreNott.html">Theodore Nott</a></li>
+                <li><a href="../../../Characters/MainCast/ThomasSelwyn.html">Thomas Selwyn</a></li>
+                <li><a href="../../../Characters/Purebloods/Active/ThorfinnRowle.html">Thorfinn Rowle</a></li>
+                <li><a href="../../../Characters/Purebloods/Active/WulfricMulciber.html">Wulfric Mulciber</a></li>
             </ul>
-            <p>Part of: <a>SpanEvent</a></p>
             <p>Event Groups:</p>
             <ul>
-                <li><a>None</a></li>
-            </ul>
-            <p>Related Organizations:</p>
-            <ul>
-                <li><a>None</a></li>
+                <li><a href="../../EventGroups/SlughornParties.html">Slughorn Parties</a></li>
             </ul>
         </div>
         <div class="main">
             <h1>09/08/1972: Slughorn Party</h1>
             <h2>Summary:</h2>
-            <p><a href="../../../Characters/Purebloods/Active/IanWilkes.html">Ian Wilkes</a> isn't there due to his <a href="./07-MaraudersDoseWilkes.html">dosing</a> the day before.</p>
+            <p><a href="../../../Characters/Purebloods/Active/IanWilkes.html">Ian Wilkes</a> isn't there due to his 
+                <a href="./07-MaraudersDoseWilkes.html">dosing</a> the day before.</p>
+            <p>Regulus meets Narcissa so they can walk down together; Narcissa suggests that he start an alliance with Wulfric Mulciber 
+                and keep an eye on <a href="../../../Characters/MainCast/DawnAvery.html">Dawn Avery</a> as a potential future wife. 
+                She approves of Regulus' alliance with <a href="../../../Characters/Purebloods/Active/SeverusSnape.html">Severus Snape</a> 
+                as a way to create distance between him and Sirius.</p>
+            <p>Narcissa suggests using the <a href="../../../Locations/HogwartsLocations/ComeAndGoRoom.html">Come and Go Room</a> to allow the 
+                Black brothers to have private conversations.</p>
+            <p>When they reach the party, they go over to Lucius, who 
+                <a href="../../../Traditions/PurebloodTraditions/PurebloodIntroductions.html">introduces</a> Regulus to Thorfinn Rowle. 
+                They discuss <a href="../../../Characters/Purebloods/Active/IvarRowle.html">Lord Rowle's</a> career and recent initiative (
+                    <a href="../../../Traditions/MinistryTraditions/BloodStatusTests.html">Ministry Blood Status Tests</a>).</p>
+            <p>Lucius introduces Regulus to Theodore Nott, Caspar Avery, and Thomas Selwyn - they discuss why Ian Wilkes isn't there and 
+                how Wulfric Mulciber will likely look for revenge. Regulus offers himself as a potential ally in getting revenge.</p>
+            <p>Theodore offers himself as an ally for Regulus, but is rebuffed because he calls Regulus the 'true heir'. Regulus uses 
+                Theodore's past relationship with Narcissa to insult him.</p>
+            <p>Regulus asks Theodore about Snape's annoyance with James' crush on Lily and receives an explanation, then implicitly 
+                admits to the <a href="./08-PoultsCauldronIncident.html">Poults Cauldron Incident</a>.</p>
+            <p>Bellatrix arrives late because she was writing to her fiance. She asks Regulus how he's been, but is interrupted by Narcissa.</p>
+            <p>Mulciber and Regulus agree to target Lily for revenge, using her friendship with Snape (and frequent dungeon visits) as an 
+                access point (<a href="../10/PettigrewHairIncident.html">Pettigrew Hair Incident</a>).</p>
         </div>
     </body>
 </html>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else if (content.children.length > 0){
+                var childHeight = 0;
+                for (i = 0; i < content.children.length; i++) {
+                    childHeight += content.children[i].scrollHeight;
+                }
+                content.style.maxHeight = content.scrollHeight + childHeight + "px";
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>

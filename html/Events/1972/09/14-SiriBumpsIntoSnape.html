@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>09/14/1972: Siri Bumps Into Snape</title>
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/main.css">
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/category.css">
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/sidemenu.css">
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/collapsible.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <ul class="breadcrumb">
+            <li class="location"><a href="../../../../index.html">...</a></li>
+            <li class="location"><a href="../../../mainTimeline.html">Main Timeline</a></li>
+        </ul>
+        <br>
+        <div class="sidenav">
+            <h2>Basic Info:</h2>
+            <p><a href="./08-TheEmpireIsFounded.html">Previous Event</a></p>
+            <p><a href="./14-SnapePufferFishEyes.html">Next Event</a></p>
+            <p>Happens In: Unknown</p>
+            <p>Location: <a>Here</a></p>
+            <p class="collapsible">Characters Present:</p>
+            <ul class="content">
+                <li><a href="../../../Characters/MainCast/JamesFleamontPotter.html">James Potter</a></li>
+                <li><a href="../../../Characters/Purebloods/Active/SeverusSnape.html">Severus Snape</a></li>
+                <li><a href="../../../Characters/MainCast/SiriusOrionBlack.html">Sirius Black</a></li>
+            </ul>
+            <p class="collapsible">Related Events:</p>
+            <!-- Events that mention this event -->
+            <ul class="content">
+                <li><a href="./14-SnapePufferFishEyes.html">09/14/1972: Snape Puffer-Fish Eyes</a></li>
+            </ul>
+            <p class="collapsible">Related Documents:</p>
+            <!-- Documents that mention this event -->
+            <ul class="content">
+                <li><a>Document</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <h1>09/14/1972: Siri Bumps Into Snape</h1>
+            <h2>Summary:</h2>
+            <p>Sirius bumps into Snape while running down the corridor with James</p>
+        </div>
+    </body>
+</html>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else if (content.children.length > 0){
+                var childHeight = 0;
+                for (i = 0; i < content.children.length; i++) {
+                    childHeight += content.children[i].scrollHeight;
+                }
+                content.style.maxHeight = content.scrollHeight + childHeight + "px";
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>

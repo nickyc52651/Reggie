@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="../../../../resources/css/main.css">
         <link rel="stylesheet" type="text/css" href="../../../../resources/css/category.css">
         <link rel="stylesheet" type="text/css" href="../../../../resources/css/sidemenu.css">
+        <link rel="stylesheet" type="text/css" href="../../../../resources/css/collapsible.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -24,9 +25,45 @@
         </div>
         <div class="main">
             <h1>Bellatrix Lestrange</h1>
+
+            <h2>Known Facts:</h2>
+
             <h2>Appears In:</h2>
-            <div class="folder"><a href="../../../Events/1972/09/1972-09-03-OpeningFeast.html">09/03/1972: Hogwarts Opening Feast</a></div>
-            <div class="folder"><a href="../../../Events/1972-12-29-RosierGala.html">12/29/1972: Rosier Gala</a></div>
+            <div class="collapsible folder">1972</div>
+            <div class="content">
+                <div class="collapsible folder">September</div>
+                <div class="content">
+                    <div class="folder"><a href="../../../Events/1972/09/1972-09-03-OpeningFeast.html">03: Hogwarts Opening Feast</a></div>
+                    <div class="folder"><a href="../../../Events/1972/09/1972-09-08-SlughornParty.html">08: Slughorn Party</a></div>
+                </div>
+                <div class="collapsible folder">December</div>
+                <div class="content">
+                    <div class="folder"><a href="../../../Events/1972-12-29-RosierGala.html">29: Rosier Gala</a></div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else if (content.children.length > 0){
+                var childHeight = 0;
+                for (i = 0; i < content.children.length; i++) {
+                    childHeight += content.children[i].scrollHeight;
+                }
+                content.style.maxHeight = content.scrollHeight + childHeight + "px";
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>
